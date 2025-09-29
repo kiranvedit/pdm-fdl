@@ -231,7 +231,7 @@ If you use this framework in your research, please cite:
 ```bibtex
 @misc{pdm_fdl_framework_2025,
   title={Privacy-Preserving Real-Time Predictive Maintenance in Industrial IoT Systems: A Federated Learning and Edge Computing Approach},
-  author={PDM-FDL Research Team},
+  author={Kiran....},
   year={2025},
   institution={Information Technology Research},
   note={Doctoral Research Framework}
