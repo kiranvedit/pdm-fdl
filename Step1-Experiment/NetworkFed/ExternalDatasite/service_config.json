@@ -1,0 +1,22 @@
+{
+    "factory_name": "factory_03",
+    "port": 8083,
+    "hostname": "localhost",
+    "dashboard_url": "http://localhost:8888",
+    "dev_mode": true,
+    "reset": true,
+    "verbose": true,
+    "python_executable": "python",
+    "script_path": "FactoryDatasite.py",
+    "restart_on_failure": true,
+    "restart_delay_seconds": 5,
+    "max_restart_attempts": 10,
+    "heartbeat_interval": 30,
+    "comments": {
+        "factory_name": "Unique name for this factory datasite (e.g., SANFactory, SEAFactory, WUS2Factory, etc.)",
+        "port": "Port for this datasite's PySyft server (must be unique per datasite)",
+        "hostname": "Hostname or IP address to bind the datasite (use actual IP for network access)",
+        "dashboard_url": "URL of the central dashboard/orchestrator",
+        "heartbeat_interval": "Seconds between heartbeat signals (default: 30)"
+    }
+}

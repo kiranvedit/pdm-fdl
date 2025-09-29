@@ -1,0 +1,113 @@
+experiment:
+  base_dir: /workspaces/pdm-fdl/Step1-Experiment
+  data_dir: /workspaces/pdm-fdl/shared/processed_data
+  data_format: both
+  evaluation_metrics:
+  - accuracy
+  - precision
+  - recall
+  - f1_score
+  - auc_roc
+  - confusion_matrix
+  experiment_description: Federated learning for industrial predictive maintenance
+  experiment_name: federated_predictive_maintenance
+  experiment_version: '1.0'
+  include_centralized_baseline: true
+  include_local_baseline: true
+  log_frequency: 10
+  log_level: INFO
+  logs_dir: /workspaces/pdm-fdl/Step1-Experiment/logs
+  max_memory_gb: 8.0
+  max_time_hours: 24.0
+  model_types:
+  - cnn
+  - lstm
+  - hybrid
+  models_dir: /workspaces/pdm-fdl/Step1-Experiment/models
+  random_seed: 42
+  results_dir: /workspaces/pdm-fdl/Step1-Experiment/results
+  save_intermediate_results: true
+  target_type: binary
+federated:
+  aggregation_method: fedavg
+  aggregation_weights: uniform
+  client_timeout: 300.0
+  clients_per_round: 5
+  compression_method: none
+  dp_l2_norm_clip: 1.0
+  dp_noise_multiplier: 1.1
+  fedprox_mu: 0.01
+  local_epochs: 5
+  max_client_failures: 2
+  min_clients: 3
+  num_clients: 10
+  num_rounds: 50
+  quantization_bits: 8
+  sampling_strategy: random
+  sparsification_ratio: 0.1
+  use_differential_privacy: false
+model:
+  attention_units: 64
+  cnn_activation: relu
+  cnn_batch_norm: true
+  cnn_dropout: 0.3
+  cnn_filters:
+  - 32
+  - 64
+  - 128
+  cnn_kernel_size: 3
+  dense_units:
+  - 128
+  - 64
+  hybrid_cnn_filters:
+  - 32
+  - 64
+  hybrid_fusion_units:
+  - 128
+  - 64
+  hybrid_lstm_units: 64
+  lstm_bidirectional: true
+  lstm_dropout: 0.2
+  lstm_recurrent_dropout: 0.2
+  lstm_return_sequences: false
+  lstm_units:
+  - 64
+  - 32
+  output_activation: softmax
+  use_attention: false
+system:
+  cpu_threads: -1
+  debug_mode: false
+  encryption_key_path: null
+  gpu_memory_limit: null
+  gradient_accumulation_steps: 1
+  master_addr: localhost
+  master_port: 12355
+  memory_efficient: true
+  profile_performance: false
+  secure_communication: true
+  use_distributed: false
+  use_gpu: false
+training:
+  batch_size: 32
+  class_weight_method: balanced
+  early_stopping: true
+  early_stopping_monitor: val_loss
+  early_stopping_patience: 10
+  epochs: 100
+  learning_rate: 0.001
+  loss_function: sparse_categorical_crossentropy
+  metrics:
+  - accuracy
+  - precision
+  - recall
+  monitor_metric: val_accuracy
+  optimizer: adam
+  reduce_lr_factor: 0.5
+  reduce_lr_on_plateau: true
+  reduce_lr_patience: 5
+  save_best_only: true
+  save_weights_only: false
+  shuffle: true
+  use_class_weights: true
+  validation_split: 0.0

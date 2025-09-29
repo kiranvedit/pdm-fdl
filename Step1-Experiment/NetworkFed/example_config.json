@@ -1,0 +1,8 @@
+{
+  "max_rounds": 5,
+  "local_epochs": 3,
+  "batch_size": 128,
+  "learning_rate": 0.005,
+  "num_datasites": 4,
+  "fedprox_mu": 0.02
+}

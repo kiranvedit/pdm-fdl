@@ -1,0 +1,15 @@
+{
+    "factory_name": "SANFactory",
+    "port": 8081,
+    "hostname": "SANFactory",
+    "dashboard_url": "http://10.10.0.12:8888",
+    "dev_mode": false,
+    "reset": false,
+    "verbose": true,
+    "python_executable": "python",
+    "script_path": "FactoryDatasite.py",
+    "restart_on_failure": true,
+    "restart_delay_seconds": 5,
+    "max_restart_attempts": 10,
+    "heartbeat_interval": 30
+}

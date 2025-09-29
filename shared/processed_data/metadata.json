@@ -1,0 +1,33 @@
+{
+  "feature_names": [
+    "Air temperature [K]",
+    "Process temperature [K]",
+    "Rotational speed [rpm]",
+    "Torque [Nm]",
+    "Tool wear [min]",
+    "Temperature_diff",
+    "Power_estimate",
+    "Tool_wear_normalized",
+    "Torque_speed_ratio",
+    "Type_encoded"
+  ],
+  "num_features": 10,
+  "num_classes_binary": 2,
+  "num_classes_multiclass": 6,
+  "config": {
+    "train_ratio": 0.6,
+    "val_ratio": 0.2,
+    "test_ratio": 0.2,
+    "normalize_method": "minmax",
+    "handle_imbalance": true,
+    "imbalance_method": "smote",
+    "create_sequences": true,
+    "sequence_length": 10,
+    "overlap_ratio": 0.5,
+    "binary_classification": true,
+    "multiclass_classification": true,
+    "num_clients": 10,
+    "non_iid_alpha": 0.5,
+    "random_seed": 42
+  }
+}

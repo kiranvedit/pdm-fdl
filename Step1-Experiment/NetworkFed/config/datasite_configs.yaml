@@ -1,0 +1,37 @@
+# Datasite Configuration File
+# Configure your external PySyft datasites running on different VMs
+
+datasites:
+  factory_01:
+    site_id: factory_01
+    hostname: localhost  # Change to actual VM IP/hostname
+    port: 8081
+    admin_email: admin@pdm-factory.com
+    admin_password: password
+    site_name: Factory_01
+  
+    
+  factory_02:
+    site_id: factory_02
+    hostname: localhost  # Change to actual VM IP/hostname 
+    port: 8082
+    admin_email: admin@pdm-factory.com
+    admin_password: password
+    site_name: Factory_02
+
+    
+  factory_03:
+    site_id: factory_03
+    hostname: localhost  # Change to actual VM IP/hostname
+    port: 8083
+    admin_email: admin@pdm-factory.com
+    admin_password: password
+    site_name: Factory_03
+
+
+# Instructions:
+# 1. Update hostnames with actual VM IPs (e.g., 192.168.1.100)
+# 2. Update ports if your datasites use different ports
+# 3. Update admin credentials if you changed them
+# 4. Add more datasites as needed
+# 5. Ensure model_type matches your pre-submitted code (cnn, lstm, hybrid)
